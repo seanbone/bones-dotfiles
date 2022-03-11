@@ -82,7 +82,9 @@ let g:auto_save = 1 " Enable auto-save on startup
 let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
 
 " Map ö to open fzf file search -- :GFiles ignores files in .gitignore
-map ö :GFiles<CR>
+" Full command: git ls-files -o --exclude-standard && git ls-files
+" This adds newly created files to the list, but not ones excluded by .gitignore
+map ö :GFiles -o --exclude-standard && git ls-files<CR>
 
 " Map keys for better navigation
 " <C-i> corresponds to Ctrl-tab
