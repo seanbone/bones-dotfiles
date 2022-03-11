@@ -6,7 +6,7 @@ Clone the repo and run the installation script:
 
     git clone git@github.com:SeanBone/bones-dotfiles.git
     cd bones-dotfiles
-    ./install.sh
+    bash -x install.sh   # Verbose run
 
 Note that this may mess with previous installations of vim. Check the install script before running!
 
