@@ -3,15 +3,14 @@
 # bones-dotfiles installation script
 
 # Install latest NeoVim release
-cd ~/.local/bin/
-curl -fLo nvim.appimage https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-ln -s nvim.appimage nvim
-ln -s nvim.appimage vim
+sudo apt install neovim
 
 # Make a symlink to this repo's init.nvim
 mkdir -p ~/.config/nvim/
 ln -s `realpath init.vim` ~/.config/nvim/init.vim
+
+# Install curl (required for installation)
+sudo apt install curl
 
 # Install Node.js, which is required for the CoC completion plugin:
 curl -sL install-node.vercel.app/lts | sudo bash
