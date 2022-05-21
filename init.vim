@@ -54,10 +54,14 @@ call plug#begin('~/.config/nvim/plugged')
     "endif
     "Plug 'xolox/vim-misc'
     "Plug 'xolox/vim-session'
+    " Plug 'taketwo/vim-ros'
 call plug#end()
 
 syntax on
 set t_Co=256
+
+" Treat ROS launch files as XML
+autocmd BufNewFile,BufRead *.launch,*.test set syntax=xml
 
 
 " NERDCommenter plugin options
