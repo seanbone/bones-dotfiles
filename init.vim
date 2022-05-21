@@ -60,8 +60,10 @@ call plug#end()
 syntax on
 set t_Co=256
 
+filetype plugin on
+
 " Treat ROS launch files as XML
-autocmd BufNewFile,BufRead *.launch,*.test set syntax=xml
+au BufNewFile,BufRead *.launch,*.test setlocal ft=xml
 
 
 " NERDCommenter plugin options
